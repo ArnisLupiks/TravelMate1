@@ -1,0 +1,41 @@
+
+<div class="page-content">
+
+<div class="row">
+<div class="space-6"></div>
+<div class="col-md-4  box-type">
+    <div id="login-box" class="login-box visible widget-box no-border">
+        <div class="widget-body">
+            <div class="widget-main">
+                <h4 class="text-center">
+                   Login to Travel Mate
+                </h4>
+				<!-- login from start -->
+                <form name="loginForm" class="form-text-type" role="form">
+                    <!-- email textbox -->
+					<div class="form-group">
+                                <input type="text" class="form-control" placeholder="Email / Phone" name="email" ng-model="login.email" required focus/>
+                    </div><!-- /email textbox -->
+					<!-- password textbox -->
+                    <div class="form-group"> 
+                                <input type="password" class="form-control" placeholder="Password" ng-model="login.password" required/>
+                    </div><!-- /password textbox -->
+                    <div class="clearfix">
+						<div class="row">
+							<label class="col-sm-3 control-label no-padding-right"> </label>
+							<div class="col-sm-6">
+								<button class="btn btn-medium btn-primary btn-block"ng-click="doLogin(login)" data-ng-disabled="loginForm.$invalid">Login</button>
+                            </div>
+                        </div>
+                    </div>
+				<div class="text-center">
+					<div><a class="color-green" href="#">Forgot your password?</a></div>
+					<div>Don't have an account? <a class="color-green" href="#/signup">Signup</a></div>
+				</div>
+				</form><!-- /from-->
+            </div><!-- /widget-main -->
+        </div><!-- /widget-body -->
+    </div><!-- /login-box -->
+</div><!-- /position-relative -->
+</div>
+</div><!-- /.page-content -->
