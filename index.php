@@ -22,7 +22,7 @@
 <![endif]-->
               </head>
 
-  <body ng-cloak="" class="background">
+  <body ng-cloak="" class="background fade-in">
 
   
       <div class="container" style="">

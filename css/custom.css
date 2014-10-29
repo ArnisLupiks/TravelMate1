@@ -4,20 +4,15 @@ body{
 	
 }
 .background{
-background: url('../img/City_phone.jpg')  no-repeat center center fixed; 
+background: url('../img/City_phone6.jpg')  no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   
 
- 
+
 }
-
-
-
-
-
 .box-type{
 color: white;
 background-color: rgba(0, 0, 0, 0.85);
