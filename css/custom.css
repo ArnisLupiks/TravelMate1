@@ -4,29 +4,22 @@ body{
 	
 }
 .background{
-background: url('../img/City_phone6.jpg')  no-repeat center center fixed; 
+background: url('../img/City_phone6.jpg') no-repeat center center fixed ; 
   -webkit-background-size: cover;
-  -moz-background-size: cover;
+
   -o-background-size: cover;
   background-size: cover;
-  
-
 
 }
 .box-type{
 color: white;
-background-color: rgba(0, 0, 0, 0.85);
+background-color: rgba(43, 43, 43,0.85);
 }
-.color-red{
-color: red;
-}
+
 .color-green{
 color: green;
 }
-.center{
-margin-left:auto;
-margin-right:auto;
-}
+
 .form-text-type{
 font-family: Arial,sans-serif;
 
@@ -96,7 +89,4 @@ box-shadow: none;
 font-size: 24px;
 text-shadow: none;
 padding-bottom: 10px;*/
-}
-.form-group-addon{
-	padding-left: -20px;
 }

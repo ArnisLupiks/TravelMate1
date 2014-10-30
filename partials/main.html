@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+    <body>
+      <header class="navbar navbar-default navbar-fixed-top navbar-inverse">
+
+			<div class="container">
+
+				<a href ="#" class="navbar-brand">Travel Mate</a>
+
+				<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse" ng-click="isCollapsed = !isCollapsed">
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+				</button>
+
+				<div class = "collapse navbar-collapse navHeaderCollapse">
+					<ul class = "nav navbar-nav navbar-right">
+							<li><a href = "#">Home</a></li>
+							<li><a href ="#">Friends</a></li>
+							<li class="dropdown">
+									<a href="#"class ="dropdown-toggle" data-toggle = "dropdown">Messages <b class = "caret"></b></a>
+									<ul class = "dropdown-menu">
+										<li><a href="#">New Message</a></li>
+										<li><a href="#">Messages</a></li>
+									</ul>
+							</li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</header>
+        <section id="main-slider" class="no-margin">
+            <div class="carousel slide wet-asphalt">
+                <ol class="carousel-indicators"></ol>
+                <div class="carousel-inner">
+                    <div class="item active" style="background-image: url(../../img/City_phone.jpg)">
+                        <div class="container">
+                            <div class="row"></div>
+                        </div>
+                    </div>
+                    
+
+                  
+                </div>
+                <!--
+
+                /.carousel-inner
+
+                -->
+            </div>
+            <!--
+
+            /.carousel
+
+            -->
+            <a class="prev hidden-xs" data-slide="prev" href="#main-slider"></a>
+            <a class="next hidden-xs" data-slide="next" href="#main-slider"></a>
+        </section>
+        <!--
+
+        /#main-slider
+
+        -->
+        <section id="services" class="emerald"></section>
+        <!--
+
+        /#services
+
+        -->
+        <section id="recent-works"></section>
+        <!--
+
+        /#recent-works
+
+        -->
+        <section id="testimonial" class="alizarin"></section>
+        <!--
+
+        /#testimonial
+
+        -->
+        <section id="bottom" class="wet-asphalt"></section>
+        <!--
+
+        /#bottom
+
+        -->
+        <footer id="footer" class="midnight-blue"></footer>
+        <!--
+
+        /#footer
+
+        -->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.prettyPhoto.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+
+</html>

@@ -18,9 +18,9 @@ app.config(['$routeProvider',
                 templateUrl: 'partials/signup.html',
                 controller: 'authCtrl'
             })
-            .when('/dashboard', {
-                title: 'Dashboard',
-                templateUrl: 'partials/dashboard.html',
+            .when('/main', {
+                title: 'Main',
+                templateUrl: 'partials/main.html',
                 controller: 'authCtrl'
             })
             .when('/', {
@@ -30,7 +30,7 @@ app.config(['$routeProvider',
                 role: '0'
             })
             .otherwise({
-                redirectTo: '/login'
+                redirectTo: '/main'
             });
   }])
     .run(function ($rootScope, $location, Data) {
