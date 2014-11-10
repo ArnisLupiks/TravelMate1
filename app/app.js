@@ -29,6 +29,26 @@ app.config(['$routeProvider',
                 controller: 'authCtrl',
                 role: '0'
             })
+            .when('/message', {
+                title: 'Message',
+                templateUrl: 'partials/message.html',
+                controller: 'authCtrl'
+            })
+            .when('/about', {
+                title: 'About',
+                templateUrl: 'partials/about.html',
+                controller: 'authCtrl'
+            })
+            .when('/contact', {
+                title: 'Contact',
+                templateUrl: 'partials/contact.html',
+                controller: 'authCtrl'
+            })
+            .when('/friends', {
+                title: 'Friends',
+                templateUrl: 'partials/friends.html',
+                controller: 'authCtrl'
+            })
             .otherwise({
                 redirectTo: '/main'
             });
