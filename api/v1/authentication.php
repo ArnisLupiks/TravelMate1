@@ -75,7 +75,7 @@ $app->post('/signUp', function() use ($app) {
             $response["status"] = "error";
             $response["message"] = "Failed to create customer. Please try again";
             echoResponse(201, $response);
-        }            
+        }
     }else{
         $response["status"] = "error";
         $response["message"] = "An user with the provided phone or email exists!";

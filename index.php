@@ -12,7 +12,7 @@
             <link href="css/custom.css" rel="stylesheet">
               <link href="css/toaster.css" rel="stylesheet">
                 <style>
-                 
+
                 </style>
                 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
                 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,7 +25,7 @@
 
   <body ng-cloak="" class="background fade-in">
 
-  
+
       <div class="container" style="">
 
         <div data-ng-view="" id="ng-view" class="slide-animation"></div>
@@ -38,9 +38,9 @@
   <script src="js/angular-route.min.js"></script>
   <script src="js/angular-animate.min.js" ></script>
   <script src="js/toaster.js"></script>
+  <script src="js/dropdown-on-mouse-over-menu.js"></script>
   <script src="app/app.js"></script>
   <script src="app/data.js"></script>
   <script src="app/directives.js"></script>
   <script src="app/authCtrl.js"></script>
 </html>
-
