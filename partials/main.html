@@ -3,7 +3,7 @@
 
 			<div class="container">
 
-				<a href ="#main" class="navbar-brand">Travel Mate</a>
+				<a href ="#profile" class="navbar-brand">Hi <span ng-bind="name"></span></a>
 
 				<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse" ng-click="isCollapsed = !isCollapsed">
 					<span class = "icon-bar"></span>
@@ -43,8 +43,11 @@
         </p>
         <p>
           Name: {{name}}
+         <span ng-bind="name"></span>
         </p>
         <p>
           Surname: {{surname}}
+          <span ng-bind="surname"></span>
+
         </p>
       </div>

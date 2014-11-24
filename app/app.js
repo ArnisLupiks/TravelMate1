@@ -26,26 +26,39 @@ app.config(['$routeProvider',
 
             .when('/message', {
                 title: 'Message',
-                templateUrl: 'partials/message.html'
-            })
+                templateUrl: 'partials/message.html',
+                controller: 'authCtrl'
+              },{
+                title:'New Message',
+                templateUrl:'partials/newMessage.html'
+              })
             .when('/posts', {
                 title: 'Posts',
-                templateUrl: 'partials/posts.html'
+                templateUrl: 'partials/posts.html',
+                controller: 'authCtrl'
             })
             .when('/about', {
                 title: 'About',
-                templateUrl: 'partials/about.html'
+                templateUrl: 'partials/about.html',
+                controller: 'authCtrl'
             })
-            .when('/',{
-              controller:'reload'
+            .when('/#',{
+              templateUrl: 'partials/main.html'
             })
             .when('/contact', {
                 title: 'Contact',
-                templateUrl: 'partials/contact.html'
+                templateUrl: 'partials/contact.html',
+                controller: 'authCtrl'
             })
             .when('/friends', {
                 title: 'Friends',
-                templateUrl: 'partials/friends.html'
+                templateUrl: 'partials/friends.html',
+                controller: 'authCtrl'
+            })
+            .when('/profile',{
+                title: 'Profile',
+                templateUrl: 'partials/profile.html',
+                controller: 'authCtrl'
             })
             .otherwise({
                 redirectTo: '/main'
@@ -60,6 +73,7 @@ app.config(['$routeProvider',
                     $rootScope.uid = results.uid;
                     $rootScope.name = results.name;
                     $rootScope.email = results.email;
+                    $rootScope.surname = results.surname;
                 } else {
                     var nextUrl = next.$$route.originalPath;
                     if (nextUrl == '/signup' || nextUrl == '/login') {
