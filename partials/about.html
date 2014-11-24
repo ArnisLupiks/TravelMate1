@@ -1,5 +1,5 @@
 
-      <header class="navbar navbar-default navbar-fixed-top navbar-inverse">
+      <header class="navbar navbar-default navbar-fixed-top navbar-inverse" >
 
 			<div class="container">
 
@@ -15,13 +15,16 @@
 					<ul class = "nav navbar-nav navbar-right">
 							<li><a href = "#main">Home</a></li>
 							<li><a href ="#friends">Friends</a></li>
-							<li class="dropdown">
-									<a href="#message"class ="dropdown-toggle" data-toggle = "dropdown">Messages <b class = "caret"></b></a>
-									<ul class = "dropdown-menu">
-										<li><a href="#message">New Message</a></li>
-										<li><a href="#message">Messages</a></li>
-									</ul>
-							</li>
+
+                  <li role="presentation" class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                    Dropdown <span class="caret"></span>
+                  </a>
+                  <ul class="dropdown-menu" role="menu">
+                    ...
+                  </ul>
+
+              </li>
 							<li><a href="#about">About</a></li>
 							<li><a href="#contact">Contact</a></li>
 							<li><a ng-click="logout();">Logout</a></li>

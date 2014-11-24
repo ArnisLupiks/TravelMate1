@@ -12,7 +12,7 @@ app.controller('authCtrl', function ($scope, $rootScope, $routeParams, $location
             }
         });
     };
-    $scope.signup = {email:'',password:'',name:'',phone:'',address:''};
+    $scope.signup = {email:'',password:'',name:'',phone:'',surname:'',address:'',city:''};
     $scope.signUp = function (customer) {
         Data.post('signUp', {
             customer: customer
@@ -29,4 +29,7 @@ app.controller('authCtrl', function ($scope, $rootScope, $routeParams, $location
             $location.path('login');
         });
     }
+});
+app.controller('reload',function($scope){
+  $scope.reload();
 });

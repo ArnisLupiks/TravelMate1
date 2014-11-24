@@ -1,4 +1,4 @@
-<?php 
+<?php
 $app->get('/session', function() {
     $db = new DbHandler();
     $session = $db->getSession();

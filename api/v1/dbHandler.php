@@ -15,13 +15,13 @@ class DbHandler {
      */
     public function getOneRecord($query) {
         $r = $this->conn->query($query.' LIMIT 1') or die($this->conn->error.__LINE__);
-        return $result = $r->fetch_assoc();    
+        return $result = $r->fetch_assoc();
     }
     /**
      * Creating new record
      */
     public function insertIntoTable($obj, $column_names, $table_name) {
-        
+
         $c = (array) $obj;
         $keys = array_keys($c);
         $columns = '';
@@ -86,7 +86,7 @@ public function destroySession(){
     }
     return $msg;
 }
- 
+
 }
 
 ?>
