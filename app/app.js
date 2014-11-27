@@ -28,9 +28,6 @@ app.config(['$routeProvider',
                 title: 'Message',
                 templateUrl: 'partials/message.html',
                 controller: 'authCtrl'
-              },{
-                title:'New Message',
-                templateUrl:'partials/newMessage.html'
               })
             .when('/posts', {
                 title: 'Posts',
@@ -73,7 +70,6 @@ app.config(['$routeProvider',
                     $rootScope.uid = results.uid;
                     $rootScope.name = results.name;
                     $rootScope.email = results.email;
-                    $rootScope.surname = results.surname;
                 } else {
                     var nextUrl = next.$$route.originalPath;
                     if (nextUrl == '/signup' || nextUrl == '/login') {
