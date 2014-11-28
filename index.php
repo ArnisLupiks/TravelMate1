@@ -6,14 +6,18 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1">
           <title>Travel Mate</title>
-          <!-- Bootstrap -->
-          <link href="css/bootstrap.min.css" rel="stylesheet">
-		  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+            <!-- Bootstrap -->
+            <!--<link href="css/bootstrap.min.css" rel="stylesheet"> -->
+		        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
             <link href="css/custom.css" rel="stylesheet">
-              <link href="css/toaster.css" rel="stylesheet">
-                <style>
+            <link href="css/toaster.css" rel="stylesheet">
 
-                </style>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+
+
                 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
                 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
                 <!--[if lt IE 9]><link href= "css/bootstrap-theme.css"rel= "stylesheet" >

@@ -29,6 +29,16 @@ app.controller('authCtrl', function ($scope, $rootScope, $routeParams, $location
             $location.path('login');
         });
     }
+    $scope.myApp = function (active) {
+        if ($route.current !== undefined) {
+            return (active === $route.current.activeSite);
+        }
+        return false;
+    };
+
+        $scope.isActive = function (viewLocation) {
+            return viewLocation === $location.path();
+        };
 });
 app.controller('reload',function($scope){
   $scope.reload();
