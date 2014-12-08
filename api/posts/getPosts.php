@@ -12,7 +12,7 @@ $status = '%';
 if(isset($_GET['status'])){
 $status = $_GET['status'];
 }
-$query="select postID, postHeading, postContent from posts";
+$query="select * from posts";
 $result = $mysqli->query($query) or die($mysqli->conn->error.__LINE__);
 
 $arr = array();
