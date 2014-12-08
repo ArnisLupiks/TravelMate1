@@ -50,4 +50,23 @@
           <span ng-bind="surname"></span>
 
         </p>
+        <div ng-controller="dbCtrl">
+
+          <table class="table table-hover">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Roll No</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr >
+                <td>{{data.postID}}</td>
+                <td>{{data.postHeading}}</td>
+                <td>{{data.postContent}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
       </div>

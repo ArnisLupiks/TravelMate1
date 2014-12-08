@@ -21,7 +21,7 @@ app.config(['$routeProvider',
             .when('/main', {
                 title: 'Main',
                 templateUrl: 'partials/main.html',
-                controller: 'authCtrl'
+                controller: 'dbCtrl'
             })
 
             .when('/message', {
