@@ -1,18 +1,19 @@
-<table ng-controller="postsController">
+<div ng-controller="postCtrl">
 
-  <thead><tr><th>Title</th><th>App Type</th><th>Code</th><th>Type</th>< tr></thead>
-
-    <tbody>
-
-      <tr ng-repeat="">
-
-        <td>{{posts.postID}}</td>
-
-        <td>{{posts.postHeading}}</td>
-
-        <td>{{posts.postContent}}</td>
-
-
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Roll No</th>
       </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="post in posts" >
 
-    </tbody> </table>
+        <td>{{post.postID}}</td>
+        <td>{{post.postHeading}}</td>
+        <td>{{post.postContent}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

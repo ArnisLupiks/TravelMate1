@@ -40,13 +40,3 @@ app.controller('authCtrl', function ($scope, $rootScope, $routeParams, $location
             return viewLocation === $location.path();
         };
 });
-
-//This controller get all Posts from user and displays in array
-app.controller('dbCtrl',function ($scope, $http) {
-  $http.get("api/posts").success(function(data){
-    $scope.data = data;
-  })
-  .error(function() {
-    $scope.data = "error in fetching data";
-  });
-});

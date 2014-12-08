@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'toaster']);
+var app = angular.module('myApp', ['ngRoute', 'ngAnimate', 'toaster',]);
 
 app.config(['$routeProvider',
   function ($routeProvider) {
@@ -21,9 +21,13 @@ app.config(['$routeProvider',
             .when('/main', {
                 title: 'Main',
                 templateUrl: 'partials/main.html',
-                controller: 'dbCtrl'
+                controller: 'authCtrl'
             })
-
+            .when('/posts',{
+              title: 'Posts',
+              templateUrl:'partials/posts.html',
+              controller: 'postCtrl'
+            })
             .when('/message', {
                 title: 'Message',
                 templateUrl: 'partials/message.html',

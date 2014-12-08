@@ -27,7 +27,7 @@
 <![endif]-->
               </head>
 
-  <body ng-cloak="" class="background fade-in">
+  <body ng-cloak=""  class="background fade-in">
 
 
       <div class="container" style="">
@@ -46,4 +46,6 @@
   <script src="app/data.js" type="text/javascript"></script>
   <script src="app/directives.js" type="text/javascript"></script>
   <script src="app/authCtrl.js" type="text/javascript"></script>
+  <script src="app/postCtrl.js" type="text/javascript"></script>
+
 </html>
