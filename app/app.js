@@ -18,9 +18,9 @@ app.config(['$routeProvider',
                 templateUrl: 'partials/signup.html',
                 controller: 'authCtrl'
             })
-            .when('/main', {
-                title: 'Main',
-                templateUrl: 'partials/main.html',
+            .when('/posts', {
+                title: 'Posts',
+                templateUrl: 'partials/posts.html',
                 controller: 'authCtrl'
             })
             .when('/posts',{
@@ -44,7 +44,7 @@ app.config(['$routeProvider',
                 controller: 'authCtrl'
             })
             .when('/#',{
-              templateUrl: 'partials/main.html'
+              templateUrl: 'partials/posts.html'
             })
             .when('/contact', {
                 title: 'Contact',
@@ -62,7 +62,7 @@ app.config(['$routeProvider',
                 controller: 'authCtrl'
             })
             .otherwise({
-                redirectTo: '/main'
+                redirectTo: '/posts'
             });
   }])
     .run(function ($rootScope, $location, Data) {

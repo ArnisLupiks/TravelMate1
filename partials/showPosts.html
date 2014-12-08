@@ -1,0 +1,26 @@
+<div ng-controller="postCtrl">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>post id</th>
+        <th>user id</th>
+        <th>post heading</th>
+        <th>post content</th>
+        <th><a href="" ng-click="reverse=!reverse;order('postDate',reverse)">post date</a></th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="post in posts" >
+
+        <td>{{post.postID}}</td>
+        <td>{{post.uid}}</td>
+        <td>{{post.postHeading}}</td>
+        <td>{{post.postContent}}</td>
+        <td>{{post.postDate}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>

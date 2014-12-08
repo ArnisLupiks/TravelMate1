@@ -1,26 +1,56 @@
-<div ng-controller="postCtrl">
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th>post id</th>
-        <th>user id</th>
-        <th>post heading</th>
-        <th>post content</th>
-        <th><a href="" ng-click="reverse=!reverse;order('postDate',reverse)">post date</a></th>
+      <header class="navbar navbar-default navbar-fixed-top navbar-inverse">
 
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="post in posts" >
+			<div class="container">
 
-        <td>{{post.postID}}</td>
-        <td>{{post.uid}}</td>
-        <td>{{post.postHeading}}</td>
-        <td>{{post.postContent}}</td>
-        <td>{{post.postDate}}</td>
+				<a href ="#profile" class="navbar-brand">Hi <span ng-bind="name"></span></a>
 
-      </tr>
-    </tbody>
-  </table>
+				<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse" ng-click="isCollapsed = !isCollapsed">
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+				</button>
+
+				<div class = "collapse navbar-collapse navHeaderCollapse">
+					<ul class = "nav navbar-nav navbar-right">
+              <li ng-class="{ active: isActive('/posts')}"><a href = "#posts">Posts</a></li>
+              <li ng-class="{ active: isActive('/friends')}"><a href ="#friends">Friends</a></li>
+              <li class="dropdown">
+                  <a class ="dropdown-toggle" data-toggle = "dropdown">Messages <b class = "caret"></b></a>
+                  <ul class = "dropdown-menu">
+                    <li  ng-class="{ active: isActive('/newMessage')}"><a href="#message">New Message</a></li>
+                    <li ng-class="{ active: isActive('/messages')}"><a href="#message">Messages</a></li>
+                  </ul>
+              </li>
+              <li ng-class="{ active: isActive('/about')}"><a href="#about">About</a></li>
+              <li ng-class="{ active: isActive('/contact')}"><a href="#contact">Contact</a></li>
+              <li><a ng-click="logout();">Logout</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</header>
+    <div class ="space">
+
+    </div>
+<div class ="col-sm-6">
+
 </div>
+      <div class ="main_container">
+        <p>
+          This is main page
+
+        </p>
+        <p>
+          Name: {{name}}
+         <span ng-bind="name"></span>
+        </p>
+        <p>
+          Surname: {{surname}}
+          <span ng-bind="surname"></span>
+
+        </p>
+
+      <div ng-include src="'partials/showPosts.html'"></div>
+
+      </div>
