@@ -1,0 +1,14 @@
+<div ng-controller="ExampleController">
+  <select ng-model="template" ng-options="t.name for t in templates">
+    <option value="">(blank)</option>
+  </select>
+  url of the template: <tt>{{template.url}}</tt>
+  <hr/>
+  <div div
+  ng-animate="{
+    enter: 'at-view-slide-in-top',
+    leave: 'at-view-slide-out-top'
+  }">
+    <div class="slide-animate" ng-include="template.url"></div>
+  </div>
+</div>
