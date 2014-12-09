@@ -42,10 +42,13 @@
   <script src="js/angular-route.min.js"type="text/javascript"></script>
   <script src="js/angular-animate.min.js" type="text/javascript"></script>
   <script src="js/toaster.js" type="text/javascript"></script>
+  <script src="js/app.js" type="text/javascript"></script>
+
   <script src="app/app.js" type="text/javascript"></script>
   <script src="app/data.js" type="text/javascript"></script>
   <script src="app/directives.js" type="text/javascript"></script>
   <script src="app/authCtrl.js" type="text/javascript"></script>
   <script src="app/postCtrl.js" type="text/javascript"></script>
+  <script src="app/postPanelCtrl.js" type="text/javascript"></script>
 
 </html>

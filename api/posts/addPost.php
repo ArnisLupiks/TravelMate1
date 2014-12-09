@@ -10,10 +10,10 @@
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
     } // The mysql database connection script
 
-    if(isset($_GET['uid'])&&isset($_GET['postHeading'])&&isset($_GET['postContent'])){
+    if(isset($_GET['uid'])&&isset($_GET['heading'])&&isset($_GET['content'])){
         $uid = $_GET['uid'];
-        $postHeading = $_GET['postHeading'];
-        $postContent = $_GET['postContent'];
+        $postHeading = $_GET['heading'];
+        $postContent = $_GET['content'];
 
         $query="INSERT INTO posts(uid,postHeading,postContent) VALUES ('$uid', '$postHeading', '$postContent')";
         $result = $mysqli->query($query) or die($mysqli->error.__LINE__);
