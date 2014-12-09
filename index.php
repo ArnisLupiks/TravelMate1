@@ -11,8 +11,6 @@
 		        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
             <link href="css/custom.css" rel="stylesheet">
             <link href="css/toaster.css" rel="stylesheet">
-            <link href="css/animation.css" rel="stylesheet">
-
 
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
@@ -44,16 +42,10 @@
   <script src="js/angular-route.min.js"type="text/javascript"></script>
   <script src="js/angular-animate.min.js" type="text/javascript"></script>
   <script src="js/toaster.js" type="text/javascript"></script>
-  <script src="js/protractor.js" type="text/javascript"></script>
-
   <script src="app/app.js" type="text/javascript"></script>
   <script src="app/data.js" type="text/javascript"></script>
   <script src="app/directives.js" type="text/javascript"></script>
   <script src="app/authCtrl.js" type="text/javascript"></script>
   <script src="app/postCtrl.js" type="text/javascript"></script>
-  <script src="app/postPageSwitch.js" type="text/javascript"></script>
-
-
-
 
 </html>
