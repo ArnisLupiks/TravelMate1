@@ -17,19 +17,20 @@ app.controller('postCtrl', function($scope, $http, $filter, $location) {
 // add post to database *****************************************************
 
   $scope.submitForm = function() {
+    var formData = {
+      uid: $('input[name=uid]').val(),
+      heading: $('input[name=heading]').val(),
+      content: $('input[name=content]').val()
+    };
       $http({
           url: "api/posts/addPost.php",
-          data:{
-            uid: $scope.uid,
-            heading: $scope.heading,
-            content: $scope.content
-          },
+          data: formData,
           method: 'POST',
           headers : {'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'}
 
       }).success(function(data){
 
-          console.log("OK", data)
+          console.log("OK", data);
 
       }).error(function(err){"ERR", console.log(err)})
   };

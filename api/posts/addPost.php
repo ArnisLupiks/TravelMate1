@@ -9,17 +9,19 @@
     if (mysqli_connect_errno()) {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
     } // The mysql database connection script
-
-    if(isset($_GET['uid'])&&isset($_GET['heading'])&&isset($_GET['content'])){
-        $uid = $_GET['uid'];
-        $postHeading = $_GET['heading'];
-        $postContent = $_GET['content'];
-
-        $query="INSERT INTO posts(uid,postHeading,postContent) VALUES ('$uid', '$postHeading', '$postContent')";
+    //declare
+    $data = json_decode(file_get_contents("php://input"));
+    $usrid = mysql_real_escape_string($data->uid);
+    $heading = mysql_real_escape_string($data->heading);
+    $content = mysql_real_escape_string($data->content);
+    //execute
+  if($usrid > 0){
+        echo $usrid;
+        $query="INSERT INTO posts(uid,postHeading,postContent) VALUES ('$usrid', '$heading', '$content')";
         $result = $mysqli->query($query) or die($mysqli->error.__LINE__);
-
         $result = $mysqli->affected_rows;
-
-        echo $json_response = json_encode($result);
+       echo $json_response = json_encode($result);
+    }else{
+      echo "there is some errors!! ";
     }
 ?>
