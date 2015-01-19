@@ -1,10 +1,10 @@
 body{
 	padding-top: 51px;
-	
-	
+
+
 }
 .background{
-background: url('../img/City_phone6.jpg') no-repeat center center fixed ; 
+background: url('../img/City_phone6.jpg') no-repeat center center fixed ;
   -webkit-background-size: cover;
 
   -o-background-size: cover;
@@ -74,7 +74,7 @@ background-color: #F5F5F5;
 }
 .navbar {
 	border-radius: 0;
-	
+
 /*background: #438EB9;
 color: #fff;border: 0;*/
 
@@ -89,4 +89,8 @@ box-shadow: none;
 font-size: 24px;
 text-shadow: none;
 padding-bottom: 10px;*/
+}
+div.addPostContainer{
+	position:relative;
+	text-color:red;
 }

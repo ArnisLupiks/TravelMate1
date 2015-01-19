@@ -50,5 +50,6 @@
   <script src="app/authCtrl.js" type="text/javascript"></script>
   <script src="app/postCtrl.js" type="text/javascript"></script>
   <script src="app/postPanelCtrl.js" type="text/javascript"></script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&libraries=places&language=en-US"></script>
 
 </html>

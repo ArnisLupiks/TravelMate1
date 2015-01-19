@@ -1,8 +1,15 @@
+<div class ="addPostContainer">
 
-  <form  ng-controller="postCtrl" ng-submit="submitForm()">
+  <form  ng-controller="postCtrl" ng-submit="submitForm()"  class="addPost">
                   <input type="hidden" name="uid" ng-value="uid" ng-model="form.uid"/>
-    Post Heading: <input type="text" name="heading"ng-model="form.heading" /><br />
-    Post Content: <input type="text" name="content"ng-model="form.content" /><br/>
+    <p>Post Heading: <input type="text" name="heading" ng-model="form.heading" /></p>
+    <p>Post Content: <input type="text" name="content" ng-model="form.content" /></p>
+    <p>Look for loaction: <google-places location=location></google-places></p>
+
+
+
+
     <input type="button" ng-click="reset()" value="Reset" />
-    <input type="submit" ngClick="Submit" value="Upload" />
+    <input type="submit" ng-click="Submit" value="Upload" />
   </form>
+</div>

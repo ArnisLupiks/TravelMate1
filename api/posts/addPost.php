@@ -14,10 +14,11 @@
     $usrid = mysql_real_escape_string($data->uid);
     $heading = mysql_real_escape_string($data->heading);
     $content = mysql_real_escape_string($data->content);
+    $location = mysql_real_escape_string($data->location);
     //execute
   if($usrid > 0){
         echo $usrid;
-        $query="INSERT INTO posts(uid,postHeading,postContent) VALUES ('$usrid', '$heading', '$content')";
+        $query="INSERT INTO posts(uid,postHeading,postContent,location) VALUES ('$usrid', '$heading', '$content', '$location')";
         $result = $mysqli->query($query) or die($mysqli->error.__LINE__);
         $result = $mysqli->affected_rows;
        echo $json_response = json_encode($result);

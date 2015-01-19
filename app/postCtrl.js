@@ -14,13 +14,23 @@ app.controller('postCtrl', function($scope, $http, $filter, $location) {
        $scope.posts = orderBy($scope.posts, predicate, reverse);
      };
    $scope.order('-postDate',false);
-// add post to database *****************************************************
-
+   //location scope is empty
+  $scope.location = '';
+// on submit button do post and collect data
   $scope.submitForm = function() {
+// check if location is set or not
+            if($scope.location === ''){
+                alert('Directive did not update the location property in parent controller.');
+            } else {
+                //alert('Yay. Location: ' + $scope.location);
+            }
+
+    // adds results to post from *********************
     var formData = {
       uid: $('input[name=uid]').val(),
       heading: $('input[name=heading]').val(),
-      content: $('input[name=content]').val()
+      content: $('input[name=content]').val(),
+      location: $scope.location
     };
       $http({
           url: "api/posts/addPost.php",
@@ -31,6 +41,7 @@ app.controller('postCtrl', function($scope, $http, $filter, $location) {
       }).success(function(data){
 
           console.log("OK", data);
+          $location.path("/");
 
       }).error(function(err){"ERR", console.log(err)})
   };
