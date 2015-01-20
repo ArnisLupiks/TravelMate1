@@ -3,7 +3,8 @@
   <form  ng-controller="postCtrl" ng-submit="submitForm()"  class="addPost">
                   <input type="hidden" name="uid" ng-value="uid" ng-model="form.uid"/>
     <p>Post Heading: <input type="text" name="heading" ng-model="form.heading" /></p>
-    <p>Post Content: <input type="text" name="content" ng-model="form.content" /></p>
+    <p>Post Content: <textarea type="text" name="content" ng-model="form.content" ng-trim = "false" maxlength="350"></textarea></p>
+    <span>{{350 - form.content.length}} left</span>
     <p>Look for loaction: <google-places location=location></google-places></p>
 
 
