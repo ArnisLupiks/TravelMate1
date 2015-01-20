@@ -96,5 +96,16 @@ app.controller('postCtrl', function($scope, $http, $filter, $location) {
         $scope.dt = angular.copy($scope.maste);
         console.log("reset has been pressed");
       };
-      $scope.reset();
+      //$scope.reset();
+
+
+
+    $scope.setMaster = function(section) {
+   console.log($(event.currentTarget));
+}
+
+$scope.isSelected = function(section) {
+    return $scope.selected === section;
+}
+
  });
