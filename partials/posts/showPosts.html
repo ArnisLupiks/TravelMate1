@@ -1,5 +1,9 @@
 <div ng-controller="postCtrl">
 
+
+      <label>Filter by keywords: <input type="text" ng-model="objProppostHeadingFilter" /></label><br />
+
+
   <table class="table">
     <thead>
       <tr>
@@ -13,7 +17,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="post in posts" >
+      <tr ng-repeat="post in posts | filter:{$: objProppostHeadingFilter}" >
 
         <td>{{post.postID}}</td>
         <td>{{post.uid}}</td>
