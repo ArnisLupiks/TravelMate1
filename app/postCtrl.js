@@ -8,18 +8,49 @@ app.controller('postCtrl', function($scope, $http, $filter, $location) {
     });
  }
 
- //filter utitlity function
- $scope.customArrayFilter = function (item){
-   return (item.postHeading.indexOf('it') != -1);
- };
-
-// option to order by date acsending and descenging mode
-   var orderBy = $filter('orderBy');
-     $scope.order = function(predicate, reverse){
-       $scope.posts = orderBy($scope.posts, predicate, reverse);
+     //filter utitlity function
+     $scope.customArrayFilter = function (item){
+       return (item.postHeading.indexOf('it') != -1);
      };
 
-     $scope.order('-postDate',false);
+    // option to order by date acsending and descenging mode
+     var orderBy = $filter('orderBy');
+       $scope.order = function(predicate, reverse){
+         $scope.posts = orderBy($scope.posts, predicate, reverse);
+       };
+
+       $scope.order('-postDate',false);
+
+
+    // date pick option
+    $scope.today = function() {
+      $scope.dt = new Date();
+      console.log("today button pressed");
+    };
+  //  $scope.today();
+
+
+    $scope.open = function($event) {
+      $event.preventDefault();
+      $event.stopPropagation();
+
+      $scope.opened = true;
+    };
+
+  $scope.dateOptions = {
+    formatYear: 'yy',
+    startingDay: 1
+  };
+
+  $scope.formats = ['yyyy/MM/dd','dd-MMMM-yyyy', 'dd.MM.yyyy', 'shortDate'];
+  $scope.format = $scope.formats[0];
+
+
+
+
+
+
+
 
    //location scope is empty
    $scope.location = '';
@@ -38,8 +69,9 @@ app.controller('postCtrl', function($scope, $http, $filter, $location) {
       var formData = {
         uid: $('input[name=uid]').val(),
         heading: $('input[name=heading]').val(),
-        content: $('input[name=content]').val(),
-        location: $scope.location
+        content: $('textarea[name=content]').val(),
+        location: $scope.location,
+        date: $scope.dt
       };
       $http({
           url: "api/posts/addPost.php",
@@ -56,4 +88,13 @@ app.controller('postCtrl', function($scope, $http, $filter, $location) {
       }).error(function(err){"ERR", console.log(err)})
   };
 
+   //reset form
+    $scope.master = {};
+    $scope.maste = "";
+   $scope.reset = function() {
+        $scope.form = angular.copy($scope.master);
+        $scope.dt = angular.copy($scope.maste);
+        console.log("reset has been pressed");
+      };
+      $scope.reset();
  });
