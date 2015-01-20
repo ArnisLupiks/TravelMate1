@@ -100,8 +100,8 @@ app.controller('postCtrl', function($scope, $http, $filter, $location) {
 
 
 
-    $scope.setMaster = function(section) {
-   console.log($(event.currentTarget));
+    $scope.setMaster = function(post, $event) {
+   console.log(post);
 }
 
 $scope.isSelected = function(section) {

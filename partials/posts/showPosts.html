@@ -4,39 +4,22 @@
       <label>Filter by keywords: <input type="text" ng-model="objProppostHeadingFilter" /></label><br />
 
 
-  <table class="table">
-
+  <table class="table table-hover">
     <tbody>
-
-
       <ul class = "list-group">
-        <a href="" ng-click="reverse=!reverse;order('postDate',reverse)">post date</a>
-
-
-        <li ng-repeat="post in posts | filter:{$: objProppostHeadingFilter}" >
-          <a ng-click ="setMaster($event)">
-
-            <h3>{{post.postHeading}}</h3>
-            <h5>{{post.postContent}}</h5>
-            <h6>{{post.location}}</h6>
-
-            <h6>{{post.date}}</h6>
-            <p>Posted by : {{post.uid}}</p>
-            <p>Posted on :{{post.postDate}}</p>
-            <p>post Id : {{post.postID}}</p>
-          </a>
-          {{selected | json}}
-          <hr />
+        <li ng-repeat="post in posts.slice().reverse() | filter:{$: objProppostHeadingFilter} " >
+          <div ng-click ="setMaster(post, $event)">
+                    <a class="list-group-item">
+                    <h3>{{post.postHeading}}</h3>
+                    <h5>{{post.postContent}}</h5>
+                
+                    <p>Posted by : {{post.uid}}</p>
+                    <p>Posted on :{{post.postDate}}</p>
+                    <p>post Id : {{post.postID}}</p>
+                  </a>
+            </div>
         </li>
-
-
-
-
-
-
-
       </ul>
-
     </tbody>
   </table>
 </div>
