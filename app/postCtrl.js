@@ -107,5 +107,10 @@ app.controller('postCtrl', function($scope, $http, $filter, $location) {
 $scope.isSelected = function(section) {
     return $scope.selected === section;
 }
+app.constant('angularMomentConfig', {
+    preprocess: 'unix', // optional
+    timezone: 'Europe/London' // optional
+});
+
 
  });

@@ -12,10 +12,13 @@
                     <a class="list-group-item">
                     <h3>{{post.postHeading}}</h3>
                     <h5>{{post.postContent}}</h5>
-                
+
                     <p>Posted by : {{post.uid}}</p>
-                    <p>Posted on :{{post.postDate}}</p>
-                    <p>post Id : {{post.postID}}</p>
+
+
+
+                    <p>Added : <span am-time-ago="post.postDate"></span></p>
+
                   </a>
             </div>
         </li>
