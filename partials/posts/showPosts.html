@@ -7,7 +7,8 @@
   <table class="table table-hover">
     <tbody>
       <ul class = "list-group">
-        <li ng-repeat="post in posts.slice().reverse() | filter:{$: objProppostHeadingFilter} " >
+        <li class="at-repeat-fade-in
+         at-repeat-fade-out" ng-repeat="post in posts.slice().reverse() | filter:{$: objProppostHeadingFilter} " >
           <div ng-click ="setMaster(post, $event)">
                     <a class="list-group-item">
                     <h3>{{post.postHeading}}</h3>

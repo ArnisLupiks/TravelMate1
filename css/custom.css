@@ -107,3 +107,41 @@ canvas {
 		height: 100px;
 		margin: 6px 0 0 6px;
 }
+//ng-repeat list show
+.at-repeat-fade-in.ng-enter, .at-repeat-fade-out.ng-leave {
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms;
+    -o-transition-duration: 300ms;
+    transition-duration: 300ms;
+}
+
+.at-repeat-fade-in.ng-enter, .at-repeat-fade-out.ng-leave {
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    -o-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms;
+    -o-transition-duration: 300ms;
+    transition-duration: 300ms;
+}
+
+.at-repeat-fade-in.ng-enter {
+    opacity: 0;
+}
+
+.at-repeat-fade-in.ng-enter-active {
+    opacity: 1;
+}
+
+.at-repeat-fade-out.ng-leave {
+    opacity: 1;
+}
+
+.at-repeat-fade-out.ng-leave-active {
+    opacity: 0;
+}
