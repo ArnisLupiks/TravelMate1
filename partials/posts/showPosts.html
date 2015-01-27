@@ -7,23 +7,47 @@
   <table class="table table-hover">
     <tbody>
       <ul class = "list-group">
-        <li class="at-repeat-fade-in
-         at-repeat-fade-out" ng-repeat="post in posts.slice().reverse() | filter:{$: objProppostHeadingFilter} " >
-          <div ng-click ="setMaster(post, $event)">
-                    <a class="list-group-item">
-                    <h3>{{post.postHeading}}</h3>
-                    <h5>{{post.postContent}}</h5>
-
-                    <p>Posted by : {{post.uid}}</p>
+        <li ng-repeat="post in posts.slice().reverse() | filter:{$: objProppostHeadingFilter} " >
+        <!--  <div ng-click ="setMaster($this, post, $scope)"> -->
 
 
-
-                    <p>Added : <span am-time-ago="post.postDate"></span></p>
-
-                  </a>
-            </div>
+            <a class="list-group-item" ng-click="openPopup(post)">
+              <div class = "panel panel-default">
+                <div class = "panel-heading">
+                  <h3><span ng-bind = "post.postHeading"></span></h3>
+                </div>
+                <div class = "panel-body">
+                  <h5><span ng-bind = "post.postContent"></span></h5>
+                  <p>Posted by : <span ng-bind ="post.uid"></span></p>
+                  <p>Added : <span am-time-ago="post.postDate"></span></p>
+                </div>
+              </div>
+            </a>
+          <!-- </div> -->
         </li>
       </ul>
     </tbody>
   </table>
+
+<script type="text/ng-template" id="individualPost.html">
+		<div class="ngdialog-message">
+			<h3>{{post.postHeading}} </h3>
+		  <span>{{post.postContent}}</span><br />
+
+      <span id = "{{post.uid}}">{{post.uid}}</span><br />
+      <span>{{post.location}}</span><br />
+      <span>{{post.postID}}</span>
+      <hr />
+
+      <span am-time-ago="post.postDate"></span>
+		</div>
+		<div class="ngdialog-buttons">
+			<button type="button" class="ngdialog-button ngdialog-button-secondary"
+				ng-dialog="secondDialogId"
+				ng-dialog-class="ngdialog-theme-default"
+				ng-dialog-controller="SecondModalCtrl"
+				ng-dialog-close-previous>Close and open</button>
+			<button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="openSecond()">Open next</button>
+		</div>
+	</script>
 </div>

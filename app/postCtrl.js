@@ -1,5 +1,6 @@
 //This controller get all Posts from user and displays in array
-app.controller('postCtrl', function($scope, $http, $filter, $location, FileUploader) {
+app.controller('postCtrl', ['$scope', '$http','$filter','$location','FileUploader','ngDialog',
+                    function($scope, $http, $filter, $location, FileUploader ,ngDialog) {
 
  getPosts(); // Load all available tasks
     function getPosts(){
@@ -29,7 +30,6 @@ app.controller('postCtrl', function($scope, $http, $filter, $location, FileUploa
     };
   //  $scope.today();
 
-
     $scope.open = function($event) {
       $event.preventDefault();
       $event.stopPropagation();
@@ -44,8 +44,6 @@ app.controller('postCtrl', function($scope, $http, $filter, $location, FileUploa
 
   $scope.formats = ['yyyy/MM/dd','dd-MMMM-yyyy', 'dd.MM.yyyy', 'shortDate'];
   $scope.format = $scope.formats[0];
-
-
 
 
 
@@ -93,15 +91,16 @@ app.controller('postCtrl', function($scope, $http, $filter, $location, FileUploa
     $scope.maste = "";
    $scope.reset = function() {
         $scope.form = angular.copy($scope.master);
-        $scope.dt = angular.copy($scope.maste);
+        $scope.dt = angular.copy($scope.master);
         console.log("reset has been pressed");
       };
       //$scope.reset();
 
-
-
-    $scope.setMaster = function(post, $event) {
-   console.log(post);
+// popup dialog for post page **********************************************************************************
+    $scope.openPopup = function(post) {
+      var newScope = $scope.$new();
+      newScope.post = post;
+      ngDialog.open({ template: 'individualPost.html', className: 'ngdialog-theme-default', controller: 'postCtrl',scope: newScope})
 }
 
 $scope.isSelected = function(section) {
@@ -171,4 +170,4 @@ app.constant('angularMomentConfig', {
 
 
 
- });
+}]);

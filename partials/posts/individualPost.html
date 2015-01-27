@@ -1,0 +1,19 @@
+<div ng-controller="postCtrl">
+
+
+
+<div class = "container">
+
+
+              <div class = "panel panel-default">
+                <div class = "panel-heading">
+                  <h3>{{post.postHeading}}</h3>
+                </div>
+                <div class = "panel-body">
+                  <h5>{{post.postContent}}</h5>
+                  <p>Posted by : {{post.uid}}</p>
+                  <p>Added : <span am-time-ago="post.postDate"></span></p>
+                </div>
+              </div>
+</div>
+</div>
