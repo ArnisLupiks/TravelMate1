@@ -4,13 +4,14 @@
   <head>
     <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>Travel Mate</title>
             <!-- Bootstrap -->
             <!--<link href="css/bootstrap.min.css" rel="stylesheet"> -->
 		        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
             <link href="css/custom.css" rel="stylesheet">
             <link href="css/toaster.css" rel="stylesheet">
+
             <!-- Popup Theme and css -->
             <link href ="css/ngDialog.css" rel ="stylesheet">
             <link href ="css/ngDialog-theme-default.css" rel ="stylesheet">
@@ -18,8 +19,10 @@
 
 
             <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-            <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-            <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+          <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
 
 
 
@@ -57,15 +60,16 @@
   <script src="js/controllers.js" type="text/javascript"></script>
   <script src="js/directives.js" type="text/javascript"></script>
   <script src="js/ngDialog.min.js" type="text/javascript"></script>
-
+  <script src="//rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.min.js"></script>
 
 <script src ="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap.min.js" type ="text/javascript"></script>
+
   <script src="app/app.js" type="text/javascript"></script>
   <script src="app/data.js" type="text/javascript"></script>
   <script src="app/directives.js" type="text/javascript"></script>
   <script src="app/authCtrl.js" type="text/javascript"></script>
   <script src="app/postCtrl.js" type="text/javascript"></script>
   <script src="app/postPanelCtrl.js" type="text/javascript"></script>
-  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&libraries=places&language=en-US"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&libraries=places&language=en-US"></script>
 
 </html>

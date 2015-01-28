@@ -100,7 +100,7 @@ app.controller('postCtrl', ['$scope', '$http','$filter','$location','FileUploade
     $scope.openPopup = function(post) {
       var newScope = $scope.$new();
       newScope.post = post;
-      ngDialog.open({ template: 'individualPost.html', className: 'ngdialog-theme-default', controller: 'postCtrl',scope: newScope})
+      ngDialog.open({ template: 'partials/posts/individualPost.html', className: 'ngdialog-theme-default', controller: 'postCtrl',scope: newScope})
 }
 
 $scope.isSelected = function(section) {
@@ -163,7 +163,6 @@ app.constant('angularMomentConfig', {
   };
 
   console.info('uploader', uploader);
-
 
 
 

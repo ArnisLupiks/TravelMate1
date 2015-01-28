@@ -1,5 +1,10 @@
+
+<ul class="nav nav-pills nav-justified">
+  <li>Add Posts</li>
+    <li>Show Post</li>
+  </ul>
 <div ng-controller="postPanelCtrl">
-  <select ng-model="template" ng-options="t.name for t in templates">
+    <select ng-model="template" ng-options="t.name for t in templates">
    <option value="">(blank)</option>
   </select>
   url of the template: <tt>{{template.url}}</tt>

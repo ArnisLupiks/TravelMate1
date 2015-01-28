@@ -4,9 +4,11 @@
       <label>Filter by keywords: <input type="text" ng-model="objProppostHeadingFilter" /></label><br />
 
 
-  <table class="table table-hover">
+
+  <table class="table table-hover" >
     <tbody>
-      <ul class = "list-group">
+      <ul class = "list-group" >
+
         <li ng-repeat="post in posts.slice().reverse() | filter:{$: objProppostHeadingFilter} " >
         <!--  <div ng-click ="setMaster($this, post, $scope)"> -->
 
@@ -18,8 +20,14 @@
                 </div>
                 <div class = "panel-body">
                   <h5><span ng-bind = "post.postContent"></span></h5>
-                  <p>Posted by : <span ng-bind ="post.uid"></span></p>
-                  <p>Added : <span am-time-ago="post.postDate"></span></p>
+                      
+                </div>
+                <div class ="panel-footer">
+                  <div class ="row">
+                    <div class = "col-sm-6">By: <span ng-bind ="post.uid"></span> </div>
+                     <div class ="col-sm-6"><span style ="position: relative;    left: -20px;" am-time-ago="post.postDate"></span></div>
+                  </div>
+
                 </div>
               </div>
             </a>
@@ -29,25 +37,5 @@
     </tbody>
   </table>
 
-<script type="text/ng-template" id="individualPost.html">
-		<div class="ngdialog-message">
-			<h3>{{post.postHeading}} </h3>
-		  <span>{{post.postContent}}</span><br />
 
-      <span id = "{{post.uid}}">{{post.uid}}</span><br />
-      <span>{{post.location}}</span><br />
-      <span>{{post.postID}}</span>
-      <hr />
-
-      <span am-time-ago="post.postDate"></span>
-		</div>
-		<div class="ngdialog-buttons">
-			<button type="button" class="ngdialog-button ngdialog-button-secondary"
-				ng-dialog="secondDialogId"
-				ng-dialog-class="ngdialog-theme-default"
-				ng-dialog-controller="SecondModalCtrl"
-				ng-dialog-close-previous>Close and open</button>
-			<button type="button" class="ngdialog-button ngdialog-button-primary" ng-click="openSecond()">Open next</button>
-		</div>
-	</script>
 </div>

@@ -225,3 +225,7 @@ canvas {
     transform: rotateX(0deg);
     z-index: 20;
 }
+.postMap {
+    width: 450px;
+    height: 450px;
+}
