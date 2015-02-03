@@ -2,16 +2,17 @@
 app.controller('postCtrl', ['$scope', '$http','$filter','$location','FileUploader','ngDialog',
                     function($scope, $http, $filter, $location, FileUploader ,ngDialog) {
 
- getPosts(); // Load all available tasks
-    function getPosts(){
-      $http.get("api/posts/getPosts.php").success(function(data){
-    $scope.posts = data;
-    });
- }
- $scope.uploader = new FileUploader();
-     //filter utitlity function
-     $scope.customArrayFilter = function (item){
-       return (item.postHeading.indexOf('it') != -1);
+   getPosts(); // Load all available tasks
+      function getPosts(){
+        $http.get("api/posts/getPosts.php").success(function(data){
+      $scope.posts = data;
+      });
+      }
+
+      $scope.uploader = new FileUploader();
+       //filter utitlity function
+       $scope.customArrayFilter = function (item){
+         return (item.postHeading.indexOf('it') != -1);
      };
 
     // option to order by date acsending and descenging mode
@@ -95,13 +96,20 @@ app.controller('postCtrl', ['$scope', '$http','$filter','$location','FileUploade
         console.log("reset has been pressed");
       };
       //$scope.reset();
-
+//$scope.map ={ center: { latitude: 45, longitude: -73}, zoom: 15};
 // popup dialog for post page **********************************************************************************
     $scope.openPopup = function(post) {
       var newScope = $scope.$new();
       newScope.post = post;
-      ngDialog.open({ template: 'partials/posts/individualPost.html', className: 'ngdialog-theme-default', controller: 'postCtrl',scope: newScope})
-}
+      ngDialog.open({ template: 'partials/posts/individualPost.html', className: 'ngdialog-theme-default', controller: 'postCtrl',scope: newScope});
+      var lat = post.latitude;
+      var long = post.longitude;
+      var mid = post.postID;
+      $scope.map ={ center : {latitude :lat , longitude: long }, zoom: 15};
+
+      $scope.markers = {key : mid, coords : {latitude :lat , longitude: long }, icon: 'components/bower_components/angular-google-maps/example/assets/images/blue_marker.png',
+                optimized:false,labelClass: "label"};
+    };
 
 $scope.isSelected = function(section) {
     return $scope.selected === section;

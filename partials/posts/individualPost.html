@@ -1,25 +1,34 @@
-
-
-
-
-
-
               <div class="ngdialog-message">
                 <h3>{{post.postHeading}} </h3>
                 <span>{{post.postContent}}</span><br />
 
                 <span id = "{{post.uid}}">{{post.uid}}</span><br />
-                <div my-map=""></div>
-              <!--  <span>{{post.location}}</span><br /> -->
-                <div class ="postMap">
+                <!--  <span>{{post.location}}</span><br /> -->
+                <div class = "col-sm-6 map_canvas">
+
+                <ui-gmap-google-map center='map.center' zoom = 'map.zoom'>
+
+                   <ui-gmap-marker idkey="markers.key" coords='markers.coords' icon='markers.icon'>
+                  <!--       <ui-gmap-windows show="'showWindow'" closeClick="'closeClick'" ng-cloak>
+                          <div>
+
+                                I should not be attached to a
+                                marker.
+                              <div ng-controller='InfoController'>
 
 
-                  <map center="{{post.location}}" zoom="16">
-          <info-window position="{{post.location}}" visible="true">
-          <span>{{post.postHeading}}</span>
-          </info-window>
-          </map>
-        </div>
+
+                                    <a class="btn" ng-click="clickedButtonInWindow()">CLICK ME</a>
+                                </div>
+                                <p ng-non-bindable >This is an info window at {{ latitude | number:4 }}, {{ longitude | number:4 }}!</p>
+
+                                <p class="muted">My marker will stay open when the window is popped up!</p>
+                            </div>
+                        </ui-gmap-windows> -->
+                    </ui-gmap-marker>
+                </ui-gmap-google-map>
+              </div>
+                <span>{{post.postID}}</span>
                 <span>{{post.postID}}</span>
                 <hr />
 

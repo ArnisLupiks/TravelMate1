@@ -1,4 +1,5 @@
-var app = angular.module('myApp', ['ngRoute','ngMap' ,'ngAnimate','ngDialog','toaster','OtdDirectives','ui.bootstrap','angularMoment','angularFileUpload','picDir']);
+'use strict';
+var app = angular.module('myApp', ['ngRoute','ngAnimate','ngDialog','uiGmapgoogle-maps','infinite-scroll','toaster','OtdDirectives','ui.bootstrap','angularMoment','angularFileUpload','picDir']);
 
 app.config(['$routeProvider',
   function ($routeProvider) {
@@ -33,11 +34,7 @@ app.config(['$routeProvider',
                 templateUrl: 'partials/message.html',
                 controller: 'authCtrl'
               })
-            .when('/posts', {
-                title: 'Posts',
-                templateUrl: 'partials/posts.html',
-                controller: 'authCtrl'
-            })
+
             .when('/about', {
                 title: 'About',
                 templateUrl: 'partials/about.html',
@@ -64,6 +61,11 @@ app.config(['$routeProvider',
             .otherwise({
                 redirectTo: '/posts'
             });
+
+          $routeProvider.when('/addPosts', {
+          templateUrl: 'partials/posts/addPosts.html',
+          controller: 'postPanelCtrl'
+          });
   }])
     .run(function ($rootScope, $location, Data) {
         $rootScope.$on("$routeChangeStart", function (event, next, current) {

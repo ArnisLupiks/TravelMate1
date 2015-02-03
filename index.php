@@ -44,6 +44,8 @@
 
       </div>
     </body>
+
+     <script src="//maps.googleapis.com/maps/api/js?libraries=weather,geometry,visualization,places&sensor=false&language=en&v=3.17"></script>
   <toaster-container toaster-options="{'time-out': 3000}"></toaster-container>
   <!-- Libs -->
   <script src="js/angular.min.js" type="text/javascript"></script>
@@ -60,7 +62,6 @@
   <script src="js/controllers.js" type="text/javascript"></script>
   <script src="js/directives.js" type="text/javascript"></script>
   <script src="js/ngDialog.min.js" type="text/javascript"></script>
-  <script src="//rawgit.com/allenhwkim/angularjs-google-maps/master/build/scripts/ng-map.min.js"></script>
 
 <script src ="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.12.0/ui-bootstrap.min.js" type ="text/javascript"></script>
 
@@ -70,6 +71,10 @@
   <script src="app/authCtrl.js" type="text/javascript"></script>
   <script src="app/postCtrl.js" type="text/javascript"></script>
   <script src="app/postPanelCtrl.js" type="text/javascript"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&libraries=places&language=en-US"></script>
+<script src="components\bower_components\ngInfiniteScroll\build\ng-infinite-scroll.min.js" type="text/javascript"></script>
+
+<script src="components\bower_components\lodash\dist\lodash.compat.min.js" type="text/javascript"></script>
+<script src="components\bower_components\angular-google-maps\dist\angular-google-maps.min.js" type="text/javascript"></script>
+
 
 </html>
