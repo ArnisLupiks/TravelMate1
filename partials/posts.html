@@ -1,47 +1,6 @@
-<header class="navbar navbar-default navbar-fixed-top navbar-inverse">
-			<div  class="container">
-				<a href ="#profile" class="navbar-brand">Hi <span ng-bind="name"></span></a>
-				<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse" ng-click="isCollapsed = !isCollapsed">
-					<span class = "icon-bar"></span>
-					<span class = "icon-bar"></span>
-					<span class = "icon-bar"></span>
-				</button>
-				<div class = "collapse navbar-collapse navHeaderCollapse">
-					<ul class = "nav navbar-nav navbar-right">
-              <li ng-class="{ active: isActive('/posts')}"><a href = "#posts">Posts</a></li>
-              <li ng-class="{ active: isActive('/friends')}"><a href ="#friends">Friends</a></li>
-              <li class="dropdown">
-                  <a class ="dropdown-toggle" data-toggle = "dropdown">Messages <b class = "caret"></b></a>
-                  <ul class = "dropdown-menu">
-                    <li  ng-class="{ active: isActive('/newMessage')}"><a href="#message">New Message</a></li>
-                    <li ng-class="{ active: isActive('/messages')}"><a href="#message">Messages</a></li>
-                  </ul>
-              </li>
-              <li ng-class="{ active: isActive('/about')}"><a href="#about">About</a></li>
-              <li ng-class="{ active: isActive('/contact')}"><a href="#contact">Contact</a></li>
-              <li><a ng-click="logout();">Logout</a></li>
-					</ul>
-				</div>
-			</div>
-</header>
-    <div class = "container">
 			<div class = "row">
-				      <div class="col-sm-3 col-md-2 sidebar">
-										<div class = "nav nav-fixed">
-				          	    <div  align="center">
-				                      <h1 class = "hidden-xs">Hey there</h1>
-				                      <div class="hidden-xs outter"><img src="http://lorempixel.com/output/people-q-c-100-100-1.jpg" class="image-circle"/></div>
-				                      <h1 class = "hidden-xs">{{name}}</h1>
-														  <p  class = "hidden-xs">What's on your mind?</p>
-															 <textarea  class = "hidden-xs" name="yourMind" rows="3" cols="20"></textarea>
 
-													</div>
-				               </div>
-								</div>
-								<div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-2 main">
-				              <div ng-include src="'partials/posts/postPanel.html'"></div>
-				         </div>
-
-
+						<div class="col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-2 main">
+				        <div ng-include src="'partials/posts/postPanel.html'"></div>
+				    </div>
 			</div>
-		</div>
