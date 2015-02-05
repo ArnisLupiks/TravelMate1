@@ -39,10 +39,7 @@
 
 
       <div class="container" style="">
-        <header ng-show="authenticated" ng-include="'partials/header.html'">
 
-        </header>
-        <span ng-show = "authenticated" ng-include ="'partials/sidebar.html'"></span>
         <div data-ng-view="" id="ng-view" class="slide-animation"></div>
 
       </div>

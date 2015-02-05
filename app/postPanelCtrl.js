@@ -1,7 +1,7 @@
 
 app.controller('postPanelCtrl', function($scope) {
-  $scope.showPosts = function() {templateUrl:'partials/posts/showPosts.html',console.log("show Posts button has been clicked")};
-  $scope.addPosts = function() {templateUrl:'partials/posts/addPosts.html'};
+  $scope.showPosts = function() {template:'partials/posts/showPosts.html',console.log("show Posts button has been clicked")};
+  $scope.addPosts = function() {template:'partials/posts/addPosts.html'};
 
 
 

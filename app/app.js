@@ -12,7 +12,7 @@ app.config(['$routeProvider',
             .when('/logout', {
                 title: 'Logout',
                 templateUrl: 'partials/login.html',
-                controller: 'authCtrl'
+                controller: 'logoutCtrl'
             })
             .when('/signup', {
                 title: 'Signup',
@@ -62,7 +62,10 @@ app.config(['$routeProvider',
                 redirectTo: '/posts'
             });
 
-
+          $routeProvider.when('/addPosts', {
+          templateUrl: 'partials/posts/addPosts.html',
+          controller: 'postPanelCtrl'
+          });
   }])
     .run(function ($rootScope, $location, Data) {
         $rootScope.$on("$routeChangeStart", function (event, next, current) {
@@ -142,6 +145,7 @@ app.config(['$routeProvider',
                   img.onload = onLoadImage;
                   img.src = event.target.result;
               }
+
               function onLoadImage() {
                   var width = params.width || this.width / this.height * params.height;
                   var height = params.height || this.height / this.width * params.width;

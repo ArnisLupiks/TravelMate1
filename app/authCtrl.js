@@ -9,7 +9,6 @@ app.controller('authCtrl', function ($scope, $rootScope, $routeParams, $location
             Data.toast(results);
             if (results.status == "success") {
                 $location.path('dashboard');
-                $rootScope.navbar = false;
             }
         });
     };
